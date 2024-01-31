@@ -18,8 +18,10 @@
 .columns > div > .columns-img-col img {
   display: block;
 }
-
-@media (width >= 900px) {
+.columns {
+  margin-top: 50px;
+}
+@media (min-width: 900px) {
   .columns > div {
     align-items: center;
     flex-direction: unset;
@@ -30,4 +32,11 @@
     flex: 1;
     order: unset;
   }
+}
+.hero-column > div > div > div {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
+.hero-column > div h4 {
+  color: #616161;
 }

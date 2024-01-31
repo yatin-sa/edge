@@ -1,0 +1,40 @@
+.my-course {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+height: 400px;
+  margin: 0 auto;
+  gap: 30px;
+}
+.block-post-products {
+  overflow: hidden;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+.products-img {
+  width: 362px;
+  height: 250px;
+}
+.img-txt-products span {
+  font-size: 18px;
+  display: block;
+  padding: 10px;
+  font-family: muli;
+}
+.dis {
+  display: none;
+}
+.pageNum {
+  padding: 4px;
+  cursor: pointer;
+}
+.courses-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 0px;
+  gap: 30px;
+}
+.grey {
+  background-color: grey;
+}

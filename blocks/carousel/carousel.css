@@ -1,0 +1,59 @@
+.carousel {
+  max-width: 100rem;
+  height: 35rem;
+  margin: 0 auto;
+  position: relative;
+  overflow-x: hidden;
+
+  /* IN THE END */
+}
+.carousel-container {
+  background-color: black;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* THIS creates the animation! */
+  transition: transform 1s;
+}
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: inherit;
+  color: #333;
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 3.25rem;
+  cursor: pointer;
+}
+
+.slider__btn--left {
+  left: 6%;
+  transform: translate(50%, -118%);
+}
+
+.slider__btn--right {
+  right: 6%;
+  transform: translate(50%, -118%);
+}
+.slide img {
+  /* Only for images that have different size than slide */
+  width: 1200px;
+  height: 500px;
+  object-fit: cover;
+}
+button {
+  padding: 0px 16px;
+  margin: 0px;
+}

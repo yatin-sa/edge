@@ -1,14 +1,23 @@
 footer {
   padding: 2rem;
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-s);
+  background-color: var(--overlay-background-color);
+  /* font-size: var(--body-font-size-s); */
 }
 
 footer .footer {
   max-width: 1200px;
   margin: auto;
+  font-size: 12px;
 }
 
 footer .footer p {
   margin: 0;
+}
+footer .footer > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 6fr;
+  gap: 20px;
+}
+footer .footer ul {
+  list-style: none;
 }
