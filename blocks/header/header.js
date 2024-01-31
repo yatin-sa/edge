@@ -218,7 +218,7 @@ export default async function decorate(block) {
       console.log("getCpOauthUrl");
 
       document.location.href =
-        "https://learningmanager.adobe.com/oauth/o/authorize?account=121816&client_id=fbe5e04a-dd1e-412f-8945-e599a7a74166&redirect_uri=https://main--edge--yatin-sa.hlx.page/details&state=cpState&scope=learner:read,learner:write&response_type=CODE&client_identifier=aemsite&logoutAfterAuthorize=true";
+        "https://learningmanager.adobe.com/oauth/o/authorize?account=121816&client_id=fbe5e04a-dd1e-412f-8945-e599a7a74166&redirect_uri=https://main--edge--yatin-sa.hlx.page/details&state=cpState&scope=learner:read,learner:write&response_type=CODE&client_identifier=aemsite";
     }
     // hamburger for mobile
     const hamburger = document.createElement("div");
