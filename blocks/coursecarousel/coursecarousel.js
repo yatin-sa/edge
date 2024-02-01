@@ -51,7 +51,7 @@ export default function decorate(block) {
     const parentEl = document.querySelector(".my-course1");
   
     const markup = generateMarkuploop();
-    parentEl.innerHTML = "";
+    parentEl.innerHTML = "";  
     parentEl.insertAdjacentHTML("afterbegin", markup);
     function generateMarkuploop() {
       const Mark = result.map((res) => generateMarkup(res)).join("");
