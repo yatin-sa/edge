@@ -198,21 +198,24 @@ export default async function decorate(block) {
       //document.getElementById("myButton").onclick = getCpOauthUrl;
     }
     async function fetchToken(code) {
-      var requestOptions = {
-        method: "POST",
-        redirect: "follow",
-      };
-
-      fetch(
-        `https://learningmanager.adobe.com/oauth/token?client_id=fbe5e04a-dd1e-412f-8945-e599a7a74166&client_secret=5fe3b3f3-e316-4b4c-9625-809bcfc9e848&refresh_token=8d9bca948a0be41dc4524152e1444b52&code=${code}`,
-        requestOptions
-      )
-        .then((response) => response.json())
-        .then((result) => {
-          console.log(result);
-          document.cookie = "access_token" + "=" + (result.access_token || "");
-        })
-        .catch((error) => console.log("error", error));
+      if(code){
+        var requestOptions = {
+          method: "POST",
+          redirect: "follow",
+        };
+  
+        fetch(
+          `https://learningmanager.adobe.com/oauth/token?client_id=fbe5e04a-dd1e-412f-8945-e599a7a74166&client_secret=5fe3b3f3-e316-4b4c-9625-809bcfc9e848&refresh_token=8d9bca948a0be41dc4524152e1444b52&code=${code}`,
+          requestOptions
+        )
+          .then((response) => response.json())
+          .then((result) => {
+            console.log(result);
+            document.cookie = "access_token" + "=" + (result.access_token || "");
+          })
+          .catch((error) => console.log("error", error));
+      }
+      
     }
     function getCpOauthUrl() {
       console.log("getCpOauthUrl");

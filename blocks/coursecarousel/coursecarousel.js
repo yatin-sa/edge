@@ -6,7 +6,7 @@ export default function decorate(block) {
     //   row.className = "profile-details";
     // });
   
-    console.log("Hello Course");
+    
     function getCookie() {
       let name = "access_token" + "=";
       let decodedCookie = decodeURIComponent(document.cookie);
