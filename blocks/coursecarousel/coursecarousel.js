@@ -40,7 +40,7 @@ export default function decorate(block) {
       .then((response) => response.json())
       .then((result) => {
         console.log(result.data);
-        const parentEl = document.querySelector(".my-course");
+        const parentEl = document.querySelector(".my-course1");
         parentEl.insertAdjacentHTML("afterend", `<div class="numList"></div>`);
         renderMarkup(result.data, true);
         pagination();
@@ -48,7 +48,7 @@ export default function decorate(block) {
       .catch((error) => console.log("error", error));
   }
   const renderMarkup = function (result, value) {
-    const parentEl = document.querySelector(".my-course");
+    const parentEl = document.querySelector(".my-course1");
   
     const markup = generateMarkuploop();
     parentEl.innerHTML = "";
