@@ -56,11 +56,11 @@ export default function decorate(block) {
     var navctr = '<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>';
     var newcont = '<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel"><div class="carousel-inner">'+markup+'</div>'+navctr+'</div>';
     parentEl.insertAdjacentHTML("afterbegin", newcont);
-    var script = document.createElement('script');
-script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js';
-    // $('.carousel').carousel({
-    //   interval: 2000
-    // });
+//     var script = document.createElement('script');
+// script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js';
+    $('.carousel').carousel({
+      interval: 500
+    });
     function generateMarkuploop() {
       const Mark = result.map((res,i) => generateMarkup(res,i)).join("");
       return Mark;
