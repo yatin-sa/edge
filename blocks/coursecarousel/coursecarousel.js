@@ -59,7 +59,7 @@ export default function decorate(block) {
 //     var script = document.createElement('script');
 // script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js';
     $('.carousel').carousel({
-      interval: 500
+      interval: 2500
     });
     $(document).on("click",".carousel-control-prev",function() {
       $('.carousel').carousel('prev');
