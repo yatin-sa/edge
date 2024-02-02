@@ -73,10 +73,13 @@ export default function decorate(block) {
     }
     function generateMarkup(result,i) {
         console.log('in function aaa',result,i)
-      return `<div class="carousel-item ${(i==0) ? "active":""}"> <div class="block-post-products p-4 dis" id="${result.attributes.localizedMetadata[0].overview}">
-  <img class="products-img" src="${result.attributes.imageUrl}" alt="" />
-  <div class="img-txt-products"><span>${result.attributes.localizedMetadata[0].name} juhhuuhhh</span></div>
-  </div></div>`;
+        if(result.attributes.imageUrl){
+          return `<div class="carousel-item ${(i==0) ? "active":""}"> <div class="block-post-products p-4 dis" id="${result.attributes.localizedMetadata[0].overview}">
+          <img class="products-img" src="${result.attributes.imageUrl}" alt="" />
+          <div class="img-txt-products"><span>${result.attributes.localizedMetadata[0].name} juhhuuhhh</span></div>
+          </div></div>`;
+        }
+      
     }
     return markup;
   };
