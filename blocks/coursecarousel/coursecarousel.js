@@ -42,8 +42,9 @@ export default function decorate(block) {
         console.log(result.data);
         const parentEl = document.querySelector(".my-course1");
         parentEl.insertAdjacentHTML("afterend", `<div class="numList"></div>`);
+        console.log('ssssss')
         renderMarkup(result.data, true);
-        pagination();
+        // pagination();
       })
       .catch((error) => console.log("error", error));
   }
@@ -51,17 +52,19 @@ export default function decorate(block) {
     const parentEl = document.querySelector(".my-course1");
   
     const markup = generateMarkuploop();
-    parentEl.innerHTML = "";  
-    parentEl.insertAdjacentHTML("afterbegin", markup);
+    parentEl.innerHTML = ""; 
+    var newcont = '<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel"><div class="carousel-inner">'+markup+'</div></div>';
+    parentEl.insertAdjacentHTML("afterbegin", newcont);
     function generateMarkuploop() {
       const Mark = result.map((res) => generateMarkup(res)).join("");
       return Mark;
     }
     function generateMarkup(result) {
-      return ` <div class="block-post-products p-4 dis" id="${result.attributes.localizedMetadata[0].overview}">
+        
+      return `<div class="carousel-item active"> <div class="block-post-products p-4 dis" id="${result.attributes.localizedMetadata[0].overview}">
   <img class="products-img" src="${result.attributes.imageUrl}" alt="" />
   <div class="img-txt-products"><span>${result.attributes.localizedMetadata[0].name} juhhuuhhh</span></div>
-  </div>`;
+  </div></div>`;
     }
     return markup;
   };
@@ -95,4 +98,4 @@ export default function decorate(block) {
       });
     });
   }
-  
+ 
