@@ -56,12 +56,12 @@ export default function decorate(block) {
     var newcont = '<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel"><div class="carousel-inner">'+markup+'</div></div>';
     parentEl.insertAdjacentHTML("afterbegin", newcont);
     function generateMarkuploop() {
-      const Mark = result.map((res) => generateMarkup(res)).join("");
+      const Mark = result.map((res,i) => generateMarkup(res,i)).join("");
       return Mark;
     }
-    function generateMarkup(result) {
+    function generateMarkup(result,i) {
         
-      return `<div class="carousel-item active"> <div class="block-post-products p-4 dis" id="${result.attributes.localizedMetadata[0].overview}">
+      return `<div class="carousel-item `+(i==0) ? "active":""+` "> <div class="block-post-products p-4 dis" id="${result.attributes.localizedMetadata[0].overview}">
   <img class="products-img" src="${result.attributes.imageUrl}" alt="" />
   <div class="img-txt-products"><span>${result.attributes.localizedMetadata[0].name} juhhuuhhh</span></div>
   </div></div>`;
