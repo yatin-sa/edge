@@ -61,6 +61,12 @@ export default function decorate(block) {
     $('.carousel').carousel({
       interval: 500
     });
+    $(document).on("click",".carousel-control-prev",function() {
+      $('.carousel').carousel('prev');
+  });
+  $(document).on("click",".carousel-control-next",function() {
+    $('.carousel').carousel('next');
+});
     function generateMarkuploop() {
       const Mark = result.map((res,i) => generateMarkup(res,i)).join("");
       return Mark;
