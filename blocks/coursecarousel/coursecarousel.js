@@ -58,9 +58,9 @@ export default function decorate(block) {
     parentEl.insertAdjacentHTML("afterbegin", newcont);
     var script = document.createElement('script');
 script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js';
-    $('.carousel').carousel({
-      interval: 2000
-    });
+    // $('.carousel').carousel({
+    //   interval: 2000
+    // });
     function generateMarkuploop() {
       const Mark = result.map((res,i) => generateMarkup(res,i)).join("");
       return Mark;
